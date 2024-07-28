@@ -1,0 +1,17 @@
+<h1>Campaign: <%= @campaign.identifier %></h1>
+<p>Number of valid votes: <%= @campaign.votes.count %></p>
+<p>Number of uncounted votes: <%= @campaign.vote_errors %> </p>
+<table>
+  <tr>
+    <th>Candidates<th>
+    <th>Score<th>
+  </tr>
+  <% @campaign.candidates.each do |candidate| %>
+    <tr>
+      <td><%= candidate.name %><td>
+      <td><%= candidate.votes.count %><td>
+    </tr>
+  <% end %>
+
+</table>
+<table>

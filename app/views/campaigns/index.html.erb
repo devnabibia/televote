@@ -1,0 +1,15 @@
+<h1>Campaigns</h1>
+<table>
+  <tr>
+    <th>
+      Campaign Identifier
+    </th>
+  </tr>
+  <% @campaigns.each do |campaign| %>
+    <tr>
+      <td>
+        <%= link_to campaign.identifier, campaign_path(campaign.id) %>
+      </td>
+    </tr>
+  <% end %>
+</table>
